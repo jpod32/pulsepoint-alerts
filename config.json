@@ -1,0 +1,15 @@
+{
+  "agencies": [],
+  "mailingList": [],
+  "checkInterval": 15,
+  "alertRegion": {
+    "center": [0, 0],
+    "radius": 1
+  },
+  "credentials": {
+    "email": "",
+    "clientId": "",
+    "clientSecret": "",
+    "refreshToken": ""
+  }
+}
