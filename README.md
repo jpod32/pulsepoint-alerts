@@ -21,4 +21,4 @@ Set up the app with the following in `config.json`
 | `credentials.clientId`     | Obtainable from Google Cloud Console.                                                                                                                  |
 | `credentials.clientSecret` | Obtainable from Google Cloud Console.                                                                                                                  |
 | `credentials.refreshToken` | Obtainable from Google OAuth Playground.                                                                                                               |
-| `mapQuestKey`              | Obtainable from MapQuest Developer                                                                                                                     |
+| `credentials.mapQuestKey`  | Obtainable from MapQuest Developer                                                                                                                     |
