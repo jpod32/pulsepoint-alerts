@@ -28,13 +28,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const formatCoords = (coordinates) => {
+  return coordinates[0] + "," + coordinates[1];
+}
+
 const mailAlert = (incident, distance) => {
   const dispatchTime = incident.receivedTime.toLocaleTimeString("en-us", {
     timeStyle: "short",
     hour12: false,
   });
 
-  const html = `<p>A ${incident.type} was dispatched ${distance.toFixed(2)} miles away at ${incident.address} at ${dispatchTime}</p>`;
+  const image = `https://www.mapquestapi.com/staticmap/v5/map?key=${config.credentials.mapQuestKey}&center=${formatCoords(config.alertRegion.center)}&zoom=14&locations=${formatCoords(config.alertRegion.center)}||${formatCoords(incident.coordinates)}|incident-lg&size=600,400&defaultMarker=marker-home&size=600,400&type=dark`
+  const html = `<p>A ${incident.type} was dispatched ${distance.toFixed(2)} miles away at ${incident.address} at ${dispatchTime}</p><img src="${image}">`;
 
   const mailOptions = {
     from: config.credentials.email,

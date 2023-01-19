@@ -10,6 +10,7 @@
     "email": "",
     "clientId": "",
     "clientSecret": "",
-    "refreshToken": ""
+    "refreshToken": "",
+    "mapQuestKey": ""
   }
 }

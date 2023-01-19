@@ -4,6 +4,8 @@ Receive email alerts when a PulsePoint incident is dispatched in a specified loc
 
 Requires [OAuth2 setup](https://support.google.com/cloud/answer/6158849) in Google Cloud Console to obtain client credentials. Use [OAuth Playground](https://developers.google.com/oauthplayground/) to get a refresh token, using https://mail.google.com as a scope.
 
+Uses a free [MapQuest API](https://developer.mapquest.com/) key to visually map incident locations in relation to the configured alert region.
+
 ## Configuration
 
 Set up the app with the following in `config.json`
@@ -19,3 +21,4 @@ Set up the app with the following in `config.json`
 | `credentials.clientId`     | Obtainable from Google Cloud Console.                                                                                                                  |
 | `credentials.clientSecret` | Obtainable from Google Cloud Console.                                                                                                                  |
 | `credentials.refreshToken` | Obtainable from Google OAuth Playground.                                                                                                               |
+| `mapQuestKey`              | Obtainable from MapQuest Developer                                                                                                                     |
